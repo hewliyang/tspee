@@ -1,4 +1,4 @@
-# DSA4212 Assignment 3
+# Collection of TSP Algorithms in Python
 
 Put algos (`.py` files) under `./algos`
 
