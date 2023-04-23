@@ -11,6 +11,7 @@ def get_cost(tour: list, dist_matrix: np.ndarray):
     """
     cost = np.sum(dist_matrix[tour[:-1], tour[1:]])
     return cost
+
 def distance(a,b):
     return ((a[0] - b[0])**2 + (a[1] - b[1])**2 )**(0.5)
 
@@ -58,7 +59,11 @@ def solver_christofides(dist_matrix: np.ndarray):
     assert len(tour) == N + 1
 
     return tour, get_cost(tour, dist_matrix)
+
 class Christofides:
+    """
+    A slower, more from-scratch version of the above algorithm
+    """
     
     def __init__(self, cities):
         self.cities = cities
